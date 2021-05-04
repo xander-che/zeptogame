@@ -405,6 +405,3 @@ if send_to_telegram:
         print(success)
 
 # END CREATE AND SEND MESSAGES TO TELEGRAM
-
-#if success == 'Next day forecast posted to the channel successfully':
-#    os.system('shutdown -s -t 0')
