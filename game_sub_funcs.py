@@ -9,10 +9,10 @@ def get_table(elems, years):
     for el in elems:
         html = el.get_attribute('innerHTML')
         soup = BeautifulSoup(html, 'html.parser')
-        date = soup.find('div', class_='event__time').get_text(strip=True)
-        home_team = soup.find('div', class_='event__participant--home').get_text(strip=True)
-        away_team = soup.find('div', class_='event__participant--away').get_text(strip=True)
-        score = soup.find('div', class_='event__scores').get_text(strip=True)
+        date = soup.find('div', class_='class name').get_text(strip=True)
+        home_team = soup.find('div', class_='class name').get_text(strip=True)
+        away_team = soup.find('div', class_='class name').get_text(strip=True)
+        score = soup.find('div', class_='class name').get_text(strip=True)
         if len(score) == 3:
             table.append({'years': years,
                           'date': date[:5].replace('.', '-'),
@@ -109,10 +109,10 @@ def get_todays_matches(elems):
     for el in elems:
         html = el.get_attribute('innerHTML')
         soup = BeautifulSoup(html, 'html.parser')
-        home_team = soup.find('div', class_='event__participant--home').get_text(strip=True)
-        away_team = soup.find('div', class_='event__participant--away').get_text(strip=True)
+        home_team = soup.find('div', class_='class name').get_text(strip=True)
+        away_team = soup.find('div', class_='class name').get_text(strip=True)
         try:
-            event_time = soup.find('div', class_='event__time').get_text(strip=True)
+            event_time = soup.find('div', class_='class name').get_text(strip=True)
         except:
             event_time = ' '
         if len(event_time) == 5:
@@ -171,13 +171,3 @@ def min_define(idx):
         min_ = 430
 
     return min_
-
-
-#def clear_team_name(name):
-#    idx = len(name)
-#    for i in range(len(name)):
-#        if name[i] == '(':
-#            idx = i-1
-#    assert '(' not in name[:idx], 'wrong clearing team name'
-#
-#    return name[:idx]
