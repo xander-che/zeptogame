@@ -7,6 +7,6 @@ The main idea of the project is to explore the possibility of forecasting discre
 ## Project status
 - [X] Dataset creation (not represented on the git-hub)
 - [X] First predictive model set-up (SARIMAX model)
-- [X] Prototype of main algorithm and additional functions creation and deploy
+- [X] Prototype of main daily algorithm and additional functions creation and deploy
 - [ ] Using neural network technologies for forecasting
 - [ ] Code refactoring
