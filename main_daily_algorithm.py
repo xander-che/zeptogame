@@ -35,19 +35,19 @@ for key in sorted(todays_matches_links.keys()):
     driver.get(todays_matches_links[key])
     time.sleep(3)
     try:
-        cookies = driver.find_element_by_id(id_='onetrust-accept-btn-handler')
+        cookies = driver.find_element_by_id(id_='element id')
         cookies.click()
     except:
         try:
             time.sleep(5)
-            cookies = driver.find_element_by_id(id_='onetrust-accept-btn-handler')
+            cookies = driver.find_element_by_id(id_='element id')
             cookies.click()
         except:
             time.sleep(5)
-            cookies = driver.find_element_by_id(id_='onetrust-accept-btn-handler')
+            cookies = driver.find_element_by_id(id_='element id')
             cookies.click()
 
-    elements = driver.find_elements_by_class_name('event__match.event__match--scheduled.event__match--oneLine')
+    elements = driver.find_elements_by_class_name('elements class name')
     matches_today = parse_today_cnd(key, elements)
 
     if not matches_today:
@@ -58,7 +58,7 @@ for key in sorted(todays_matches_links.keys()):
     if matches_today:
         try:
             driver.get(results_links[key])
-            YEARS = driver.find_element_by_css_selector('div.teamHeader__text')
+            YEARS = driver.find_element_by_css_selector('element css selector')
             years = YEARS.get_attribute('innerHTML').replace('/', '-')
             time.sleep(5)
         except:
@@ -66,7 +66,7 @@ for key in sorted(todays_matches_links.keys()):
             print('error in START UPDATE RESULTS')
 
         try:
-            next_step = driver.find_elements_by_css_selector('a.event__more.event__more--static')
+            next_step = driver.find_elements_by_css_selector('element css selector')
         except:
             continue
 
@@ -83,7 +83,7 @@ for key in sorted(todays_matches_links.keys()):
             print(f'All data in one page for {key}')
 
         min_ = min_define(idx)
-        elements = driver.find_elements_by_css_selector('div.event__match.event__match--static.event__match--oneLine')
+        elements = driver.find_elements_by_css_selector('element css selector')
 
         parse(elements, years, key, min_)
 
