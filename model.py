@@ -215,7 +215,6 @@ def test_search_params(train_data):
     return res
 
 
-#def test_predict(train_data, search):
 def test_predict(search):
     ones = []
     ones_predict = []
