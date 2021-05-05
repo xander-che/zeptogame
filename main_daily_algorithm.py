@@ -11,7 +11,7 @@ from ftplib import FTP
 import ftplib
 import telegram
 
-from functions_set import make_forecast, testexp_search_params, dataset
+from model import make_forecast, testexp_search_params, dataset
 from game_sub_funcs import parse_today_cnd, min_define, parse
 from game_dicts import todays_matches_links, results_links, champs_archive_data_paths
 from game_dicts import map_champ_fullname, map_champ_reduction
