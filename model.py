@@ -200,7 +200,7 @@ def test_search_params(train_data):
                     else:
                         binary_markers.append(0)
                 model_score = sum(binary_markers) / sum(true_positive)
-                model_acuracy = sum(result) / sum(ted)
+                model_accuracy = sum(result) / sum(ted)
                 predict, _ = train_predict(train_data, p[j], d[i], q[k])
                 for n in range(len(ted)):
                     means.append(ted[n] - result[n])
@@ -208,7 +208,7 @@ def test_search_params(train_data):
                             'd': d[i],
                             'q': q[k],
                             'score': model_score,
-                            'accuracy': model_acuracy,
+                            'accuracy': model_accuracy,
                             'predict': predict,
                             'mean_error': np.mean(means)})
 
