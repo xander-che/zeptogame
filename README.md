@@ -10,3 +10,7 @@ The main idea of the project is to explore the possibility of forecasting discre
 - [X] Prototype of main daily algorithm and additional functions creation and deploy
 - [ ] Using neural network technologies for forecasting
 - [ ] Code refactoring
+
+
+## Note:
+Some parts of the code (links to the sources, login info, telegram-bot token, etc.) are not available for obvious reasons.
